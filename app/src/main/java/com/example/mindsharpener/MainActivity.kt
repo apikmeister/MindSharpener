@@ -12,7 +12,7 @@ import android.widget.Toast
 import java.util.Random
 
 class MainActivity : AppCompatActivity() {
-    
+
     private var level = 0
     private var score = 0
     private var firstNumber = 0
@@ -55,7 +55,11 @@ class MainActivity : AppCompatActivity() {
         checkButton.setOnClickListener {
             // check if the textEdit is empty, show toast so user can answer the question and not implement the logic to checkanswer
             if (answerText.text.toString().isEmpty()) {
-                Toast.makeText(applicationContext, "Please answer the question given in the answer field.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(
+                    applicationContext,
+                    "Please answer the question given in the answer field.",
+                    Toast.LENGTH_SHORT
+                ).show()
 
             } else {
                 // get and parse user answer to check and generate a new question
